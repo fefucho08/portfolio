@@ -46,3 +46,7 @@ window.addEventListener("load", () => {
         id = setInterval(frame, 0.3);
     }
 });
+
+function teste() {
+    alert("Teste");
+}

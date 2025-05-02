@@ -19,18 +19,18 @@
     <body>
         <main>
             <div
-                class="background flex flex-col items-center justify-around gap-8 min-h-[80svh]"
+                class="background flex flex-col items-center justify-around gap-8 min-h-[90svh] md:justify-center"
             >
                 <div class="upperInfo text-center">
                     <h1
-                        class="text-4xl font-bold text-center mb-5 text-(--primary-color)"
+                        class="text-4xl font-bold text-center mb-5 text-(--light-color) md:text-5xl"
                     >
                         Felipe Ferreira Moreira
                     </h1>
                     <p class="font-medium text-white">Web Developer</p>
                 </div>
                 <div
-                    class="imageContainer w-70 aspect-square relative overflow-hidden"
+                    class="imageContainer w-70 aspect-square relative overflow-hidden md:w-100"
                 >
                     <img
                         src="./images/profile.png"
@@ -39,31 +39,126 @@
                     />
                 </div>
             </div>
-            <div class="appsDrawer hidden md:block">
+            <div class="appsDrawer hidden md:flex md:justify-between">
                 <div class="upper text-white p-5 text-3xl relative md:hidden">
                     <i
                         class="closeDrawer fa-solid fa-circle-xmark absolute right-5"
                     ></i>
                 </div>
-                <div class="mt-2 p-5">
+                <div
+                    class="infoContainer mt-2 p-5 text-center md:flex md:flex-col md:items-center"
+                >
                     <h2 class="text-2xl text-white font-semibold">
                         Information
                     </h2>
-                    <div class="infoApps grid grid-cols-2">
-                        <button target-window="aboutWindow">
+                    <div
+                        class="infoApps grid items-start grid-cols-3 gap-5 p-5 md:flex md:flex-col md:max-w-fit"
+                    >
+                        <button target-window="aboutWindow" class="app">
                             <div class="appIcon">
-                                <i class="fa-solid fa-user"></i>
+                                <img
+                                    src="./images/user-solid.svg"
+                                    alt="User Icon"
+                                />
                             </div>
-                            <span class="appName">About Me</span>
+                            <span class="appName text-center">About Me</span>
+                        </button>
+                        <button target-window="educationWindow" class="app">
+                            <div class="appIcon">
+                                <img
+                                    src="./images/graduation-cap-solid.svg"
+                                    alt="Gradutation Icon"
+                                />
+                            </div>
+                            <span class="appName text-center">Education</span>
+                        </button>
+                        <button target-window="skillsWindow" class="app">
+                            <div class="appIcon">
+                                <img
+                                    src="./images/laptop-code-solid.svg"
+                                    alt="Laptop Icon"
+                                />
+                            </div>
+                            <span class="appName text-center">Skills</span>
                         </button>
                     </div>
-                    <h2>My Projects</h2>
-                    <div class="projectsApps"></div>
+                </div>
+                <div
+                    class="projectsContainer mt-2 p-5 text-center md:flex md:flex-col md:items-center"
+                >
+                    <h2 class="text-2xl text-white font-semibold">
+                        My Projects
+                    </h2>
+                    <div
+                        class="projectsApps grid items-start grid-cols-3 gap-5 p-5 md:flex md:flex-col md:max-w-fit"
+                    >
+                        <button target-window="paranormalProject" class="app">
+                            <div class="appIcon">
+                                <img
+                                    src="./images/dice-d20-solid.svg"
+                                    alt="Dice Icon"
+                                />
+                            </div>
+                            <span class="appName text-center"
+                                >Fichas Paranormais</span
+                            >
+                        </button>
+                        <button target-window="pastroteProject" class="app">
+                            <div class="appIcon">
+                                <img
+                                    src="./images/hand-holding-heart-solid.svg"
+                                    alt="Hand holdin heart icon"
+                                />
+                            </div>
+                            <span class="appName text-center">Pastrote</span>
+                        </button>
+                        <button target-window="minefieldProject" class="app">
+                            <div class="appIcon">
+                                <img
+                                    src="./images/land-mine-on-solid.svg"
+                                    alt="Land mine icon"
+                                />
+                            </div>
+                            <span class="appName text-center">Minefield</span>
+                        </button>
+                        <button target-window="electionProject" class="app">
+                            <div class="appIcon">
+                                <img
+                                    src="./images/landmark-dome-solid.svg"
+                                    alt="Dome icon"
+                                />
+                            </div>
+                            <span class="appName text-center"
+                                >Election System</span
+                            >
+                        </button>
+                        <button target-window="javaGuiProject" class="app">
+                            <div class="appIcon">
+                                <img
+                                    src="./images/java-brands.svg"
+                                    alt="Java icon"
+                                />
+                            </div>
+                            <span class="appName text-center"
+                                >Dynamic Java GUI</span
+                            >
+                        </button>
+                        <button target-window="phpProject" class="app">
+                            <div class="appIcon">
+                                <img
+                                    src="./images/laptop-medical-solid.svg"
+                                    alt="Laptop Medical Icon"
+                                />
+                            </div>
+                            <span class="appName text-center"
+                                >Healthcare Backend</span
+                            >
+                        </button>
+                    </div>
                 </div>
             </div>
         </main>
         <footer class="toolbar flex justify-center items-center">
-            <div class="projectsBar hidden md:flex"></div>
             <div
                 class="drawerIcon text-white min-h-[10svh] flex items-center md:hidden"
             >
