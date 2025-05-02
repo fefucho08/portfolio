@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <script
+            src="https://kit.fontawesome.com/60832ed020.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./scripts.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+        <title>Felipe Ferreira Moreira</title>
+    </head>
+    <body>
+        <main>
+            <div class="background"></div>
+            <div
+                class="desktop flex flex-col min-h-[90svh] items-center justify-center"
+            >
+                <div class="left hidden md:flex"></div>
+                <div
+                    class="middle flex flex-col items-center justify-around gap-8 min-h-[80svh]"
+                >
+                    <div class="upperInfo text-center">
+                        <h1
+                            class="text-4xl font-bold text-center mb-5 text-(--primary-color)"
+                        >
+                            Felipe Ferreira Moreira
+                        </h1>
+                        <p class="font-medium text-white">Web Developer</p>
+                    </div>
+                    <div
+                        class="imageContainer w-70 aspect-square relative overflow-hidden"
+                    >
+                        <img
+                            src="./images/profile.png"
+                            alt="Image of myself with the arms crossed"
+                            class="absolute top-0 aspect-square"
+                        />
+                    </div>
+                </div>
+                <div class="right hidden md:flex"></div>
+            </div>
+
+            <div class="appsDrawer">
+                <div class="upper text-white p-5 text-3xl relative">
+                    <i
+                        class="closeDrawer fa-solid fa-circle-xmark absolute right-5"
+                    ></i>
+                </div>
+            </div>
+        </main>
+        <footer class="toolbar flex justify-center items-center">
+            <div class="projectsBar hidden md:flex"></div>
+            <div
+                class="appsIcon text-white min-h-[10svh] flex items-center md:hidden"
+            >
+                <img
+                    src="./images/grid-fill.svg"
+                    alt="Grid icon"
+                    class="min-h-[5svh] w-auto invert"
+                />
+            </div>
+        </footer>
+    </body>
+</html>
