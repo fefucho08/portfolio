@@ -18,47 +18,54 @@
     </head>
     <body>
         <main>
-            <div class="background"></div>
             <div
-                class="desktop flex flex-col min-h-[90svh] items-center justify-center"
+                class="background flex flex-col items-center justify-around gap-8 min-h-[80svh]"
             >
-                <div class="left hidden md:flex"></div>
-                <div
-                    class="middle flex flex-col items-center justify-around gap-8 min-h-[80svh]"
-                >
-                    <div class="upperInfo text-center">
-                        <h1
-                            class="text-4xl font-bold text-center mb-5 text-(--primary-color)"
-                        >
-                            Felipe Ferreira Moreira
-                        </h1>
-                        <p class="font-medium text-white">Web Developer</p>
-                    </div>
-                    <div
-                        class="imageContainer w-70 aspect-square relative overflow-hidden"
+                <div class="upperInfo text-center">
+                    <h1
+                        class="text-4xl font-bold text-center mb-5 text-(--primary-color)"
                     >
-                        <img
-                            src="./images/profile.png"
-                            alt="Image of myself with the arms crossed"
-                            class="absolute top-0 aspect-square"
-                        />
-                    </div>
+                        Felipe Ferreira Moreira
+                    </h1>
+                    <p class="font-medium text-white">Web Developer</p>
                 </div>
-                <div class="right hidden md:flex"></div>
+                <div
+                    class="imageContainer w-70 aspect-square relative overflow-hidden"
+                >
+                    <img
+                        src="./images/profile.png"
+                        alt="Image of myself with the arms crossed"
+                        class="absolute top-0 aspect-square"
+                    />
+                </div>
             </div>
-
-            <div class="appsDrawer">
-                <div class="upper text-white p-5 text-3xl relative">
+            <div class="appsDrawer hidden md:block">
+                <div class="upper text-white p-5 text-3xl relative md:hidden">
                     <i
                         class="closeDrawer fa-solid fa-circle-xmark absolute right-5"
                     ></i>
+                </div>
+                <div class="mt-2 p-5">
+                    <h2 class="text-2xl text-white font-semibold">
+                        Information
+                    </h2>
+                    <div class="infoApps grid grid-cols-2">
+                        <button target-window="aboutWindow">
+                            <div class="appIcon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <span class="appName">About Me</span>
+                        </button>
+                    </div>
+                    <h2>My Projects</h2>
+                    <div class="projectsApps"></div>
                 </div>
             </div>
         </main>
         <footer class="toolbar flex justify-center items-center">
             <div class="projectsBar hidden md:flex"></div>
             <div
-                class="appsIcon text-white min-h-[10svh] flex items-center md:hidden"
+                class="drawerIcon text-white min-h-[10svh] flex items-center md:hidden"
             >
                 <img
                     src="./images/grid-fill.svg"
