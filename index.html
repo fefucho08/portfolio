@@ -24,13 +24,14 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
         <link rel="stylesheet" href="styles.css" />
         <title>Felipe Ferreira Moreira</title>
     </head>
     <body>
         <main>
             <div
-                class="background flex flex-col items-center justify-around gap-8 min-h-[90svh] md:justify-center"
+                class="background animate__animated animate__zoomIn flex flex-col items-center justify-around gap-8 min-h-[90svh] py-5 md:justify-center"
             >
                 <div class="upperInfo text-center">
                     <h1
@@ -51,14 +52,16 @@
                     />
                 </div>
             </div>
-            <div class="appsDrawer hidden md:flex md:justify-between">
+            <div
+                class="appsDrawer hidden md:flex md:justify-between md:items-center"
+            >
                 <div class="upper text-white p-5 text-3xl relative md:hidden">
                     <i
                         class="closeDrawer fa-solid fa-circle-xmark absolute right-5"
                     ></i>
                 </div>
                 <div
-                    class="infoContainer mt-2 p-5 text-center md:flex md:flex-col md:items-center"
+                    class="infoContainer animate__animated animate__zoomInLeft mt-2 p-5 text-center md:flex md:flex-col md:items-center md:max-w-[187px]"
                 >
                     <h2 class="text-2xl text-white font-semibold">
                         Information
@@ -105,7 +108,7 @@
                     </div>
                 </div>
                 <div
-                    class="projectsContainer mt-2 p-5 text-center md:flex md:flex-col md:items-center"
+                    class="projectsContainer animate__animated animate__zoomInRight mt-2 p-5 text-center md:flex md:flex-col md:items-center md:max-w-[240px]"
                 >
                     <h2 class="text-2xl text-white font-semibold">
                         My Projects
@@ -219,10 +222,13 @@
                 >
                     About Me
                 </h1>
-                <div class="imageContainer">
+                <div
+                    class="imageContainer mx-auto mb-[10px] md:mx-[10px] md:float-left"
+                >
                     <img
                         src="../images/volunteer1.webp"
                         alt="Image of me and kids during a volunteer trip"
+                        class="object-[-70px]"
                     />
                 </div>
                 <p>
@@ -242,7 +248,9 @@
                     , the State University of Campinas, where I continue to
                     refine my skills and grow as a professional.
                 </p>
-                <div class="imageContainer">
+                <div
+                    class="imageContainer mx-auto mb-[10px] md:mx-[10px] md:float-right"
+                >
                     <img
                         src="../images/volunteer2.webp"
                         alt="Image of me and a kid in a wheel chair"
@@ -284,7 +292,7 @@
                         >solving challenges collaboratively.</span
                     >
                 </p>
-                <p>
+                <p class="md:clear-both">
                     I'm always eager to learn, experiment, and create. Whether
                     it's developing software, designing a game, or diving into a
                     new project, I thrive on challenges and the opportunity to
@@ -296,14 +304,108 @@
             </div>
         </div>
 
-        <div class="window" id="educationWindow">
-            <h1>Education</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias vero ab qui eaque doloribus, laborum cumque
-                aFsperiores necessitatibus dicta nostrum dolores maxime
-                reprehenderit quisquam laudantium at eveniet harum eum dolorum?
-            </p>
+        <div class="window relative" id="educationWindow">
+            <div
+                class="upperWindow flex justify-end md:justify-start p-5 gap-2 h-fit border-b-1 border-(--background-color) sticky top-0"
+            >
+                <button
+                    class="closeBtn bg-red-400 flex"
+                    onclick="toggleWindow('educationWindow')"
+                >
+                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
+                </button>
+                <button
+                    class="minBtn hidden bg-yellow-400 md:flex"
+                    onclick="minimize('educationWindow')"
+                >
+                    <i
+                        class="fa-solid fa-down-left-and-up-right-to-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+                <button
+                    class="fullBtn hidden bg-green-400 md:flex"
+                    onclick="fullScreen('educationWindow')"
+                >
+                    <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+            </div>
+            <div class="content p-5">
+                <h1
+                    class="text-2xl bg-(--primary-color) text-white w-fit p-2 font-bold mb-10"
+                >
+                    Education
+                </h1>
+                <div class="educationCarousel flex flex-wrap justify-center">
+                    <div class="educationCard">
+                        <div class="institution">
+                            <img
+                                src="../images/tamwood.webp"
+                                alt="Tamwood Careers Logo"
+                            />
+                        </div>
+                        <div class="educationInfo">
+                            <h3 class="text-lg font-bold text-center">
+                                Web Developer Co-op Diploma
+                            </h3>
+                            <p class="text-center text-sm font-medium">
+                                2025 - 2026
+                            </p>
+                            <p>Tamwood Careers, Vancouver, Canada</p>
+                        </div>
+                    </div>
+                    <div class="educationCard">
+                        <div class="institution">
+                            <img
+                                src="../images/unicamp.webp"
+                                alt="UNICAMP Logo"
+                            />
+                        </div>
+                        <div class="educationInfo">
+                            <h3 class="text-lg font-bold text-center">
+                                Degree in System Analysis and Development
+                            </h3>
+                            <p class="text-center text-sm font-medium">
+                                2023 - 2027
+                            </p>
+                            <p>
+                                State University of Campinas (UNICAMP), Limeira,
+                                Brazil
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    My academic experience has played a crucial role in shaping
+                    my professional development. Studying at UNICAMP, recognized
+                    as one of the top universities in Latin America and the
+                    <span class="important">
+                        leading institution for technology in Brazil</span
+                    >, has provided me with a broad and comprehensive foundation
+                    across various fields of knowledge. The rigorous and
+                    innovative academic environment at UNICAMP has instilled in
+                    me a
+                    <span class="important"
+                        >strong analytical mindset, adaptability, and
+                        problem-solving abilities</span
+                    >
+                    that are essential for tackling diverse challenges in the
+                    professional world.
+                </p>
+                <p>
+                    Additionally, my international experience at Tamwood has
+                    been invaluable. It has not only contributed significantly
+                    to my personal growth by exposing me to different cultures
+                    and perspectives but also allowed me to focus on acquiring
+                    <span class="important"
+                        >specific, industry-relevant knowledge in web
+                        development</span
+                    >.
+                </p>
+            </div>
         </div>
     </body>
     <script src="./scripts.js"></script>

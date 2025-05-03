@@ -94,6 +94,7 @@ if (screen.availWidth > 768) {
         bounds: "main",
         cursor: "default",
         activeCursor: "default",
+        allowEventDefault: true,
     });
 }
 
@@ -114,3 +115,10 @@ function minimize(windowId) {
         windowElem.style.transition = "none";
     }, 300);
 }
+
+windowsContent = document.querySelectorAll(".window .content");
+
+windowsContent.forEach((content) => {
+    content.classList.add("animate__animated");
+    content.classList.add("animate__zoomIn");
+});
