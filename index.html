@@ -96,7 +96,7 @@
                             </div>
                             <span class="appName text-center">Skills</span>
                         </button>
-                        <a class="app">
+                        <a class="app" href="./images/CV.webp" download>
                             <div class="appIcon">
                                 <img
                                     src="./images/file-solid.svg"
@@ -405,6 +405,147 @@
                         development</span
                     >.
                 </p>
+            </div>
+        </div>
+
+        <div class="window relative" id="skillsWindow">
+            <div
+                class="upperWindow flex justify-end md:justify-start p-5 gap-2 h-fit border-b-1 border-(--background-color) sticky top-0"
+            >
+                <button
+                    class="closeBtn bg-red-400 flex"
+                    onclick="toggleWindow('skillsWindow')"
+                >
+                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
+                </button>
+                <button
+                    class="minBtn hidden bg-yellow-400 md:flex"
+                    onclick="minimize('skillsWindow')"
+                >
+                    <i
+                        class="fa-solid fa-down-left-and-up-right-to-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+                <button
+                    class="fullBtn hidden bg-green-400 md:flex"
+                    onclick="fullScreen('skillsWindow')"
+                >
+                    <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+            </div>
+            <div class="content p-5">
+                <h1
+                    class="text-2xl bg-(--primary-color) text-white w-fit p-2 font-bold mb-10"
+                >
+                    Programming Languages
+                </h1>
+                <div class="languagesGallery">
+                    <div class="langSlides">
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/JS.webp" alt="JS Logo" />
+                            </div>
+                            <p>JS</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/C.webp" alt="C Logo" />
+                            </div>
+                            <p>C</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img
+                                    src="../images/tsql.webp"
+                                    alt="Transact SQL Logo"
+                                />
+                            </div>
+                            <p>T-SQL</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img
+                                    src="../images/java.webp"
+                                    alt="Java Logo"
+                                />
+                            </div>
+                            <p>Java</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/cpp.webp" alt="C++ Logo" />
+                            </div>
+                            <p>C++</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/cs.webp" alt="C# Logo" />
+                            </div>
+                            <p>C#</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/php.webp" alt="PHP Logo" />
+                            </div>
+                            <p>PHP</p>
+                        </div>
+
+                        <!-- TWICE TO CREATE THE ANIMATION -->
+
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/JS.webp" alt="JS Logo" />
+                            </div>
+                            <p>JS</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/C.webp" alt="C Logo" />
+                            </div>
+                            <p>C</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img
+                                    src="../images/tsql.webp"
+                                    alt="Transact SQL Logo"
+                                />
+                            </div>
+                            <p>T-SQL</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img
+                                    src="../images/java.webp"
+                                    alt="Java Logo"
+                                />
+                            </div>
+                            <p>Java</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/cpp.webp" alt="C++ Logo" />
+                            </div>
+                            <p>C++</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/cs.webp" alt="C# Logo" />
+                            </div>
+                            <p>C#</p>
+                        </div>
+                        <div class="langCard">
+                            <div class="languageSymbol">
+                                <img src="../images/php.webp" alt="PHP Logo" />
+                            </div>
+                            <p>PHP</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
