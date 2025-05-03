@@ -12,7 +12,18 @@
             src="https://kit.fontawesome.com/60832ed020.js"
             crossorigin="anonymous"
         ></script>
-        <script src="./scripts.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+            integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Draggable.min.js"
+            integrity="sha512-dgqdovLK5r/NMiV5YfWA0xC94DKGrm+6q1OZpuWHm+uBGLTck6wu58WAX9lmy8wec6cVnsgxbPJ60DtmNFnfgg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
         <link rel="stylesheet" href="styles.css" />
         <title>Felipe Ferreira Moreira</title>
     </head>
@@ -25,7 +36,8 @@
                     <h1
                         class="text-4xl font-bold text-center mb-5 text-(--light-color) md:text-5xl"
                     >
-                        Felipe Ferreira Moreira
+                        Felipe Ferreira <br />
+                        Moreira
                     </h1>
                     <p class="font-medium text-white">Web Developer</p>
                 </div>
@@ -52,7 +64,7 @@
                         Information
                     </h2>
                     <div
-                        class="infoApps grid items-start grid-cols-3 gap-5 p-5 md:flex md:flex-col md:max-w-fit"
+                        class="infoApps p-5 gap-5 items-start grid grid-cols-3 md:grid-cols-1"
                     >
                         <button target-window="aboutWindow" class="app">
                             <div class="appIcon">
@@ -81,6 +93,15 @@
                             </div>
                             <span class="appName text-center">Skills</span>
                         </button>
+                        <a class="app">
+                            <div class="appIcon">
+                                <img
+                                    src="./images/file-solid.svg"
+                                    alt="File Icon"
+                                />
+                            </div>
+                            <span class="appName text-center">My CV</span>
+                        </a>
                     </div>
                 </div>
                 <div
@@ -90,7 +111,7 @@
                         My Projects
                     </h2>
                     <div
-                        class="projectsApps grid items-start grid-cols-3 gap-5 p-5 md:flex md:flex-col md:max-w-fit"
+                        class="projectsApps p-5 gap-5 items-start grid grid-cols-3 md:grid-cols-2 md:max-w-fit"
                     >
                         <button target-window="paranormalProject" class="app">
                             <div class="appIcon">
@@ -99,9 +120,7 @@
                                     alt="Dice Icon"
                                 />
                             </div>
-                            <span class="appName text-center"
-                                >Fichas Paranormais</span
-                            >
+                            <span class="appName text-center">RPG Sheets</span>
                         </button>
                         <button target-window="pastroteProject" class="app">
                             <div class="appIcon">
@@ -128,9 +147,7 @@
                                     alt="Dome icon"
                                 />
                             </div>
-                            <span class="appName text-center"
-                                >Election System</span
-                            >
+                            <span class="appName text-center">Election</span>
                         </button>
                         <button target-window="javaGuiProject" class="app">
                             <div class="appIcon">
@@ -139,9 +156,7 @@
                                     alt="Java icon"
                                 />
                             </div>
-                            <span class="appName text-center"
-                                >Dynamic Java GUI</span
-                            >
+                            <span class="appName text-center">Java GUI</span>
                         </button>
                         <button target-window="phpProject" class="app">
                             <div class="appIcon">
@@ -150,9 +165,7 @@
                                     alt="Laptop Medical Icon"
                                 />
                             </div>
-                            <span class="appName text-center"
-                                >Healthcare Backend</span
-                            >
+                            <span class="appName text-center">Healthcare</span>
                         </button>
                     </div>
                 </div>
@@ -169,5 +182,129 @@
                 />
             </div>
         </footer>
+
+        <!-- CONTENT WINDOWS -->
+        <div class="window relative" id="aboutWindow">
+            <div
+                class="upperWindow flex justify-end md:justify-start p-5 gap-2 h-fit border-b-1 border-(--background-color) sticky top-0"
+            >
+                <button
+                    class="closeBtn bg-red-400 flex"
+                    onclick="toggleWindow('aboutWindow')"
+                >
+                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
+                </button>
+                <button
+                    class="minBtn hidden bg-yellow-400 md:flex"
+                    onclick="minimize('aboutWindow')"
+                >
+                    <i
+                        class="fa-solid fa-down-left-and-up-right-to-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+                <button
+                    class="fullBtn hidden bg-green-400 md:flex"
+                    onclick="fullScreen('aboutWindow')"
+                >
+                    <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+            </div>
+            <div class="content p-5">
+                <h1
+                    class="text-2xl bg-(--primary-color) text-white w-fit p-2 font-bold mb-10"
+                >
+                    About Me
+                </h1>
+                <div class="imageContainer">
+                    <img
+                        src="../images/volunteer1.webp"
+                        alt="Image of me and kids during a volunteer trip"
+                    />
+                </div>
+                <p>
+                    I'm someone with many passions, and
+                    <span class="important">technology</span> has always been
+                    one of the strongest among them. My journey into programming
+                    began when I was 14, during the pandemic, when my curiosity
+                    led me to explore the world of code on my own. What started
+                    as simple research quickly turned into a deep interest, and
+                    from that point on, I've been constantly learning and
+                    expanding my knowledge in the field. This passion and
+                    dedication eventually led me to be admitted into the
+                    <span class="important"
+                        >second-best university in Latin America and the top
+                        tech institution in Brazil</span
+                    >
+                    , the State University of Campinas, where I continue to
+                    refine my skills and grow as a professional.
+                </p>
+                <div class="imageContainer">
+                    <img
+                        src="../images/volunteer2.webp"
+                        alt="Image of me and a kid in a wheel chair"
+                    />
+                </div>
+                <p>
+                    My love for technology extends beyond just programming. One
+                    of my biggest interests is video games—not only playing them
+                    but also understanding how they are built. This curiosity
+                    naturally led me to explore
+                    <span class="important">game development</span>, a field
+                    that perfectly combines logic, creativity, and
+                    problem-solving. I find it fascinating how games can create
+                    immersive experiences that engage players on multiple
+                    levels, and I aspire to contribute to that world in my own
+                    way.
+                </p>
+                <p>
+                    Beyond my interests in technology and games, I also have a
+                    strong passion for
+                    <span class="important">volunteer work</span>, something
+                    I've been involved in since I was 11 years old. I believe in
+                    the power of giving back to the community and making a
+                    positive impact on people's lives. My most recent experience
+                    in this area was working with
+                    <span class="important">Trote da Cidadania</span>, a
+                    student-led organization at my university focused on social
+                    initiatives. Being part of this project reinforced my
+                    commitment to using my skills and time to contribute to
+                    meaningful causes.
+                </p>
+                <p>
+                    Another major passion of mine is tabletop RPGs. I love how
+                    they bring people together, allowing for incredible
+                    storytelling, strategic thinking, and boundless creativity.
+                    Whether I'm playing or running a game, I enjoy the process
+                    of crafting unique narratives and
+                    <span class="important"
+                        >solving challenges collaboratively.</span
+                    >
+                </p>
+                <p>
+                    I'm always eager to learn, experiment, and create. Whether
+                    it's developing software, designing a game, or diving into a
+                    new project, I thrive on challenges and the opportunity to
+                    bring ideas to life. I believe that technology, combined
+                    with creativity and social responsibility, has the power to
+                    build amazing things, and I'm excited to be part of that
+                    journey.
+                </p>
+            </div>
+        </div>
+
+        <div class="window" id="educationWindow">
+            <h1>Education</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias vero ab qui eaque doloribus, laborum cumque
+                aFsperiores necessitatibus dicta nostrum dolores maxime
+                reprehenderit quisquam laudantium at eveniet harum eum dolorum?
+            </p>
+        </div>
     </body>
+    <script src="./scripts.js"></script>
 </html>
