@@ -174,15 +174,46 @@
                 </div>
             </div>
         </main>
-        <footer class="toolbar flex justify-center items-center">
+        <footer class="toolbar flex justify-center flex-wrap items-center p-3">
             <div
-                class="drawerIcon text-white min-h-[10svh] flex items-center md:hidden"
+                class="drawerIcon text-white min-h-[10svh] w-full flex items-center justify-center md:hidden animate__animated animate__backInUp"
             >
                 <img
                     src="./images/grid-fill.svg"
                     alt="Grid icon"
                     class="min-h-[5svh] w-auto invert"
                 />
+            </div>
+            <div
+                class="socialLinks grid grid-cols-3 items-center gap-5 animate__animated animate__backInUp"
+            >
+                <button
+                    onclick="toggleWindow('contactWindow')"
+                    class="socialMedia w-[30px] max-h-[80%]"
+                    data-tooltip="Contact Me"
+                >
+                    <img
+                        src="./images/envelope-solid.svg"
+                        alt="Envelope icon"
+                    />
+                </button>
+                <a
+                    href="https://github.com/fefucho08"
+                    class="socialMedia w-[30px] max-h-[80%]"
+                    data-tooltip="GitHub"
+                >
+                    <img src="./images/github-brands.svg" alt="Github icon" />
+                </a>
+                <a
+                    href="https://linkedin.com/in/felipe-ferreira-moreira"
+                    class="socialMedia w-[30px] max-h-[80%]"
+                    data-tooltip="LinkedIn"
+                >
+                    <img
+                        src="./images/linkedin-brands.svg"
+                        alt="LinkedIn icon"
+                    />
+                </a>
             </div>
         </footer>
 
@@ -551,6 +582,89 @@
                     <li>Ease of learing</li>
                     <li>Time Management</li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="window relative" id="contactWindow">
+            <div
+                class="upperWindow flex justify-end md:justify-start p-5 gap-2 h-fit border-b-1 border-(--background-color) sticky top-0"
+            >
+                <button
+                    class="closeBtn bg-red-400 flex"
+                    onclick="toggleWindow('contactWindow')"
+                >
+                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
+                </button>
+                <button
+                    class="minBtn hidden bg-yellow-400 md:flex"
+                    onclick="minimize('contactWindow')"
+                >
+                    <i
+                        class="fa-solid fa-down-left-and-up-right-to-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+                <button
+                    class="fullBtn hidden bg-green-400 md:flex"
+                    onclick="fullScreen('contactWindow')"
+                >
+                    <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+            </div>
+            <div class="content p-5">
+                <form
+                    action="https://formspree.io/f/xqaqqkjo"
+                    method="post"
+                    class="contactForm"
+                >
+                    <h1
+                        class="text-2xl text-white w-fit p-2 font-bold row-[1/2] col-span-full"
+                    >
+                        Send me a message!
+                    </h1>
+                    <div
+                        class="inputGroup relative col-span-full row-[2/3] md:col-[1/2]"
+                    >
+                        <input
+                            type="text"
+                            name="name"
+                            id="nameInput"
+                            required
+                        />
+                        <label for="nameInput">Name</label>
+                    </div>
+                    <div
+                        class="inputGroup relative col-span-full row-[3/4] md:row-[2/3] md:col-[2/3]"
+                    >
+                        <input
+                            type="email"
+                            name="email"
+                            id="emailInput"
+                            required
+                        />
+                        <label for="emailInput">Email</label>
+                    </div>
+                    <div
+                        class="inputGroup relative md:row-[4/5] md:row-[3/4] col-span-full"
+                    >
+                        <textarea
+                            name="message"
+                            id="messageArea"
+                            required
+                        ></textarea>
+                        <label for="messageArea">Your message</label>
+                    </div>
+                    <button
+                        type="submit"
+                        id="submitBtn"
+                        class="row-[5/6] md:row[4/5] col-span-full md:col-[2/3] w-full md:w-[40%] justify-self-end bg-white text-(--primary-color) rounded-[5px]"
+                    >
+                        Send! <i class="fa-solid fa-message"></i>
+                    </button>
+                </form>
             </div>
         </div>
 

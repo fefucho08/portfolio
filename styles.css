@@ -25,7 +25,7 @@ body {
     min-height: 100svh;
 }
 
-main {
+primary {
     min-height: 90svh;
 }
 
@@ -81,12 +81,6 @@ footer {
 .appName {
     font-size: 0.7rem;
     font-weight: 600;
-}
-
-.drawerIcon {
-    animation: heartBeat;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
 }
 
 .appsDrawer {
@@ -290,6 +284,92 @@ footer {
     font-size: small;
 }
 
+#contactWindow .contactForm {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 3rem;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 20px;
+    min-width: 60vw;
+}
+
+#contactWindow .inputGroup label {
+    color: #fff;
+    padding: 0 5px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0.6em;
+    pointer-events: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+#contactWindow .inputGroup:has(textarea) label {
+    top: 15%;
+}
+
+#contactWindow .inputGroup input,
+#contactWindow .inputGroup textarea {
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0.6rem;
+    outline: none;
+    width: 100%;
+}
+
+#contactWindow .inputGroup textarea {
+    resize: none;
+    min-height: 150px;
+    width: 100%;
+}
+
+#contactWindow .inputGroup input:focus-visible ~ label,
+#contactWindow .inputGroup input:valid ~ label,
+#contactWindow .inputGroup textarea:focus-visible ~ label,
+#contactWindow .inputGroup textarea:valid ~ label {
+    top: 0;
+    background-color: var(--primary-color);
+    font-size: 0.7rem;
+}
+
+#contactWindow #submitBtn {
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+#contactWindow #submitBtn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 10px #fff;
+}
+
+@keyframes hoverApp {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @keyframes galleryAnimation {
     0% {
         transform: translateX(0);
@@ -369,14 +449,55 @@ footer {
         cursor: pointer;
 
         .appIcon {
-            box-shadow: currentColor 0 0 10px;
-            transform: scale(1.1);
+            filter: drop-shadow(0 0 5px #fff);
+            animation: hoverApp;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
         }
     }
 
     .window.visible {
         width: 70%;
         height: 60%;
+    }
+
+    .socialMedia:hover {
+        animation: hoverApp;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        cursor: pointer;
+    }
+
+    .socialMedia {
+        position: relative;
+    }
+
+    .socialMedia::after {
+        content: attr(data-tooltip);
+        visibility: hidden;
+        opacity: 0;
+        width: max-content;
+        background-color: var(--primary-color);
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 2px 5px;
+        position: absolute;
+        font-size: smaller;
+        z-index: 1;
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: opacity 0.5s;
+    }
+
+    .socialMedia:hover::after {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .socialMedia:hover img {
+        filter: drop-shadow(0 0 5px #fff);
     }
 
     #skillsWindow .langSlides {
