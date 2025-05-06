@@ -743,6 +743,68 @@
                 </div>
             </div>
         </div>
+
+        <div class="window relative" id="pastroteProject">
+            <div
+                class="upperWindow flex justify-end md:justify-start p-5 gap-2 h-fit border-b-1 border-(--background-color) sticky top-0"
+            >
+                <button
+                    class="closeBtn bg-red-400 flex"
+                    onclick="toggleWindow('pastroteProject')"
+                >
+                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
+                </button>
+                <button
+                    class="minBtn hidden bg-yellow-400 md:flex"
+                    onclick="minimize('pastroteProject')"
+                >
+                    <i
+                        class="fa-solid fa-down-left-and-up-right-to-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+                <button
+                    class="fullBtn hidden bg-green-400 md:flex"
+                    onclick="fullScreen('pastroteProject')"
+                >
+                    <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+            </div>
+            <div class="content p-5">
+                <h1
+                    class="text-2xl bg-(--primary-color) text-white w-fit p-2 font-bold mb-10"
+                >
+                    <i class="fa-solid fa-hand-holding-heart"></i> Pastrote
+                </h1>
+                <p>
+                    <span class="font-semibold">Framework:</span>
+                    React.js <i class="fa-brands fa-react"></i>
+                </p>
+                <div
+                    class="windowImageContainer w-[60%] md:w-[30%] float-left mr-4"
+                >
+                    <img
+                        src="./images/pastrote.webp"
+                        alt=""
+                        class="object-cover w-full h-full"
+                    />
+                </div>
+                <p>
+                    Pastrote is a web application designed to streamline the
+                    sale of pastéis during a Festa Junina fundraising event for
+                    Trote da Cidadania, a volunteer organization. The system
+                    manages payments, tracks pastel inventory, and organizes the
+                    production queue for fryers, ensuring a smooth and efficient
+                    workflow. Built with React.js, the frontend provides a
+                    user-friendly interface for sellers and kitchen staff. I was
+                    responsible for developing the frontend, focusing on
+                    usability and performance to enhance the overall experience.
+                </p>
+            </div>
+        </div>
     </body>
     <script src="./scripts.js"></script>
 </html>
