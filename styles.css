@@ -56,11 +56,10 @@ footer {
 }
 
 .appIcon {
-    background: var(--primary-color);
     background: linear-gradient(
-        210deg,
-        rgba(95, 122, 219, 1) 0%,
-        rgba(162, 178, 238, 1) 100%
+        135deg,
+        rgba(95, 122, 219, 1) 50%,
+        rgb(98, 115, 177) 100%
     );
     width: 100%;
     aspect-ratio: 1 / 1;
