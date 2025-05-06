@@ -805,6 +805,81 @@
                 </p>
             </div>
         </div>
+
+        <div class="window relative" id="minefieldProject">
+            <div
+                class="upperWindow flex justify-end md:justify-start p-5 gap-2 h-fit border-b-1 border-(--background-color) sticky top-0"
+            >
+                <button
+                    class="closeBtn bg-red-400 flex"
+                    onclick="toggleWindow('minefieldProject')"
+                >
+                    <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
+                </button>
+                <button
+                    class="minBtn hidden bg-yellow-400 md:flex"
+                    onclick="minimize('minefieldProject')"
+                >
+                    <i
+                        class="fa-solid fa-down-left-and-up-right-to-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+                <button
+                    class="fullBtn hidden bg-green-400 md:flex"
+                    onclick="fullScreen('minefieldProject')"
+                >
+                    <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        style="color: #ffffff"
+                    ></i>
+                </button>
+            </div>
+            <div class="content p-5">
+                <h1
+                    class="text-2xl bg-(--primary-color) text-white w-fit p-2 font-bold mb-10"
+                >
+                    <i class="fa-solid fa-land-mine-on"></i> Minefield Game
+                </h1>
+                <p>
+                    <span class="font-semibold">Languages:</span>
+                    HTML <i class="fa-brands fa-html5"></i>, CSS
+                    <i class="fa-brands fa-css3-alt"></i>, JavaScript
+                    <i class="fa-brands fa-js"></i>, PHP
+                    <i class="fa-brands fa-php"></i>
+                </p>
+                <p>
+                    This platform allows users to play Minefield, providing a
+                    seamless gaming experience with user management and match
+                    tracking. The frontend is built with HTML, CSS, and
+                    JavaScript, while the backend, developed in PHP, handles the
+                    SQL database for storing user data, match history, and a
+                    global ranking system. Players can track their past games
+                    and compete for the highest scores in the global
+                    leaderboard.
+                </p>
+                <div
+                    class="imageGallery grid grid-cols-1 md:grid-cols-2 items-center gap-2"
+                >
+                    <img
+                        src="./images/minefield2.webp"
+                        alt="Screenshot of minefield website"
+                    />
+                    <img
+                        src="./images/minefield.webp"
+                        alt="Screenshot of minefield website"
+                    />
+                </div>
+                <div class="external flex flex-wrap justify-center gap-5 mt-5">
+                    <a
+                        href="https://github.com/fefucho08/minefield-game"
+                        class="bg-(--light-color) text-(--dark-color) rounded-full px-4 py-2"
+                    >
+                        Go to GitHub <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </body>
     <script src="./scripts.js"></script>
 </html>
